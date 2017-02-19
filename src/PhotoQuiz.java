@@ -57,7 +57,7 @@ public class PhotoQuiz {
 		// 14+ check answer, say if correct or incorrect, etc.
 		if (elephantQA == 0) {
 			JOptionPane.showMessageDialog(null,
-					"Incorrect.  The elephant appears to have feet that disappear as they travel down.");
+					"Incorrect.  The elephant's feet appear to disappear as they stretch downwards.");
 		} else {
 			JOptionPane.showMessageDialog(null, "Correct.  How many feet do you think it has?");
 		}
