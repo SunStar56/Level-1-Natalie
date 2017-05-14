@@ -127,7 +127,7 @@ public class Jeopardy implements ActionListener {
 			askQuestion("This animal can roll into a ball when startled to protect itself.", "Porcupine", 400);
 			secondButton.setText("");
 		} else if (buttonPressed == thirdButton) {
-			askQuestion("This animal has one or two fat filled humps to keep them ");
+
 		}
 	}
 
