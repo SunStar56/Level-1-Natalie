@@ -58,15 +58,15 @@ public class CutenessTV implements MouseListener {
 		
 	}
 	void showDucks() {
-		playVideo("oMQI0bJJOvM");
+		playVideo("Drirjl5K9Yk");
 	}
 
 	void showFrog() {
-		playVideo("BaYAR9S3D00");
+		playVideo("aSjCb-FfxhI");
 	}
 	
 	void showUnicorns() {
-		playVideo("17o1OlroNSE");
+		playVideo("qRC4Vk6kisY");
 	}
  
 	void playVideo(String videoID) {
