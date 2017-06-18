@@ -1,6 +1,5 @@
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.image.AreaAveragingScaleFilter;
 import java.net.URI;
 
 import javax.swing.JButton;
@@ -59,9 +58,9 @@ public class CutenessTV implements MouseListener {
 		
 	}
 	void showDucks() {
-		playVideo("Drirjl5K9Yk");
-	}//
- //oMQI0bJJOvM
+		playVideo("oMQI0bJJOvM");
+	}
+
 	void showFrog() {
 		playVideo("BaYAR9S3D00");
 	}
