@@ -21,5 +21,8 @@ public class Netflix {
 		nq.printMovies();
 		System.out.println("The best movie is " + nq.getBestMovie() + ".");
 		System.out.println("The second best movie is " + nq.getMovie(1) + ".");
+		System.out.println("The third best movie is " + nq.getMovie(2) + ".");
+		System.out.println("The fourth best movie is " + nq.getMovie(3) + ".");
+		System.out.println("The WORST movie is " + nq.getMovie(4) + ".");
 	}
 }
