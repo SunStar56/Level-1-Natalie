@@ -6,6 +6,8 @@
 /Cat.jpeg
 /ChuckleClicker.class
 /CowTimer.class
+/CutenessTV.class
+/CutenessTVRunner.class
 /DownArrow.png
 /DuelingButtons.class
 /FortuneCookie.class
@@ -13,6 +15,8 @@
 /Houses.class
 /Jeopardy.class
 /LeftArrow.jpg
+/Minion.class
+/MinionTest.class
 /Panda.jpg
 /Pencil.class
 /PhotoQuiz.class
@@ -30,8 +34,6 @@
 /creepy-noise.wav
 /llama.wav
 /sound.mp3
-/CutenessTV.class
-/CutenessTVRunner.class
-/Minions.class
-/MinionTest.class
-/Minion.class
+/Netflix.class
+/Movie.class
+/NetflixQueue.class
