@@ -27,4 +27,12 @@ public class Pizza {
 	public boolean getEdibility() {
 		return this.isEdible;
 	}
+
+	public String toString() {
+		String message = "This " + this.getSize() + " inch long " + this.getName() + " contains lots of "
+				+ this.getTopping() + ". It is also known to be the cause of many " + this.getEdibility()
+				+ " rumors that this pizza is edible.";
+		return message;
+
+	}
 }
