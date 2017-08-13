@@ -15,6 +15,7 @@ public class PigLatinConverter implements  ActionListener {
 	static JButton button;
 	
 public static void main(String[] args) {
+	
 	frame = new JFrame();
 	frame.setVisible(true);
 	panel = new JPanel();
@@ -26,6 +27,7 @@ public static void main(String[] args) {
 	panel.add(button);
 	panel.add(esultray);
 	frame.pack();
+	translate(input.getText());
 }
  PigLatinConverter() {
 	 button.addActionListener(this);	
