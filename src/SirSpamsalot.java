@@ -20,10 +20,10 @@ public static void main(String[] args) {
 	frame.pack();
 }
 private static void SirSpamsalot() {
-	// TODO Auto-generated method stub
+	
 	
 }public SirSpamsalot() {
-	
+	String email = "sirspamsalot@gmail.com";
 }
 
 }
