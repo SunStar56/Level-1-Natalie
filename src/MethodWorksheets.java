@@ -70,6 +70,7 @@ if (age > 50)
 return 30;
 if (age < 10) 
 return 20;
+return age;
 }
 
 }
