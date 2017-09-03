@@ -1,5 +1,6 @@
 package leagueInvaders;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,6 +16,11 @@ public class GamePanel extends JPanel implements ActionListener,KeyListener{
 	final int GAME_STATE = 1;
 	final int END_STATE = 2;
 	int currentState = MENU_STATE;
+	Font titleFont;
+	Font titleFontStart;
+	Font titleFontInstructions;
+	Rocketship r = new Rocketship(250,700,50,50);
+	ObjectManager manager = new ObjectManager();
 	//GameObject object;
 	public void paintComponent(Graphics g) {
 	//object.draw(g);
@@ -31,6 +37,10 @@ public class GamePanel extends JPanel implements ActionListener,KeyListener{
 	public GamePanel(){
 		timer =  new Timer(1000/60, this);
 		//object  = new GameObject();
+		titleFont = new Font("Arial",Font.PLAIN,48);
+		titleFontStart = new Font("Arial", Font.PLAIN,24);
+		titleFontInstructions = new Font("Arial", Font.PLAIN,24);
+		manager.addObject(r);
 	}
 	void startGame() {
 		timer.start();
@@ -67,7 +77,17 @@ public class GamePanel extends JPanel implements ActionListener,KeyListener{
 			if(currentState > END_STATE){
 				currentState = MENU_STATE;
 		}
-			
+		
+		}
+		if (e.getKeyCode() == KeyEvent.VK_A) {
+			r.left = true;
+		}
+		if (e.getKeyCode() == KeyEvent.VK_D) {
+			r.right = true;
+		}
+		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+			manager.addObject(new Projectile(r.x+20, r.y, 10, 10));
+
 		}
 			
 	}
@@ -76,6 +96,12 @@ public class GamePanel extends JPanel implements ActionListener,KeyListener{
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
 		System.out.println("keyReleased");
+		if (e.getKeyCode() == KeyEvent.VK_A) {
+			r.left = false;
+		}
+		if (e.getKeyCode() == KeyEvent.VK_D) {
+			r.right = false;
+		}
 	}
 	
 	void updateMenuState() {
@@ -84,7 +110,8 @@ public class GamePanel extends JPanel implements ActionListener,KeyListener{
 	}
 	
 	void updateGameState() {
-		
+		manager.update();
+		manager.manageEnemies();
 		
 	}
 	
@@ -96,12 +123,21 @@ public class GamePanel extends JPanel implements ActionListener,KeyListener{
 	void drawMenuState(Graphics g) {
 		g.setColor(Color.BLUE);
 		g.fillRect(0, 0, LeagueInvaders.FRAMEWIDTH, LeagueInvaders.FRAMEHEIGHT);
+		g.setFont(titleFont);
+		g.setColor(Color.YELLOW);
+		g.drawString("LEAGUE INVADERS",25, 200);
+		g.setFont(titleFontStart);
+		g.setColor(Color.GREEN);
+		g.drawString("Press ENTER to start", 125, 300);
+		g.drawString("Press SPACE for instructions", 90, 400);
+		
 		
 	}
 	
 	void drawGameState(Graphics g) {
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, LeagueInvaders.FRAMEWIDTH, LeagueInvaders.FRAMEHEIGHT);
+		manager.draw(g);
 		
 	}
 	
