@@ -11,6 +11,7 @@ int updateNum = 0;
 	}
 	
 	void update() {
+		super.update();
 		y+=10;
 		if (updateNum >= 0 && updateNum < 25) {
 			x+=10;
@@ -28,8 +29,7 @@ int updateNum = 0;
 	}
 	
 	void draw(Graphics g) {
-		g.setColor(Color.YELLOW);
-		g.fillRect(x, y, width, height);
+		g.drawImage(GamePanel.alienImg, x, y, width, height, null);
 		
 	}
 	
