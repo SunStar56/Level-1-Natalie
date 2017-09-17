@@ -27,6 +27,7 @@ public class GamePanel extends JPanel implements ActionListener,KeyListener{
 	Font instructionsFont;
 	Font instructionsEnd;
 	Font gameOverLarge;
+	Font gameOverSmall;
 	public static BufferedImage alienImg;
 	public static BufferedImage rocketImg;
 	public static BufferedImage bulletImg;
@@ -53,6 +54,7 @@ public class GamePanel extends JPanel implements ActionListener,KeyListener{
 		titleFontInstructions = new Font("Arial", Font.PLAIN,24);
 		instructionsFont = new Font("Arial",Font.PLAIN,24);
 		instructionsEnd = new Font("Arial", Font.ITALIC, 48);
+		gameOverSmall = new Font("Arial", Font.PLAIN,24);
 		gameOverLarge = new Font("Arial", Font.ITALIC, 50);
 		manager.addObject(r);
 		try {
@@ -185,6 +187,8 @@ public class GamePanel extends JPanel implements ActionListener,KeyListener{
 		g.setFont(gameOverLarge);
 		g.setColor(Color.BLACK);
 		g.drawString("GAME OVER", 100, 200);
+		g.setFont(gameOverSmall);
+		g.drawString("You shot "  + "aliens!  Press ||ENTER|| to restart.", 20, 300);
 	}
 	
 	void drawInstructionState(Graphics g) {

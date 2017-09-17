@@ -1,6 +1,4 @@
 package leagueInvaders;
-
-import java.awt.Color;
 import java.awt.Graphics;
 
 public class Alien extends GameObject {
@@ -14,11 +12,11 @@ int updateNum = 0;
 		super.update();
 		y+=10;
 		if (updateNum >= 0 && updateNum < 25) {
-			x+=10;
+			x+=100;
 			updateNum++;
 		}
 		if (updateNum <= 25) {
-			x -= 10;
+			x -= 100;
 			updateNum++;
 		}
 		updateNum++;
