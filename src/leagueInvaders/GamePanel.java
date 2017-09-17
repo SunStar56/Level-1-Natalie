@@ -162,6 +162,7 @@ public class GamePanel extends JPanel implements ActionListener,KeyListener{
 	
 	void drawMenuState(Graphics g) {
 		g.setColor(Color.BLUE);
+		manager.setScore(0);
 		g.fillRect(0, 0, LeagueInvaders.FRAMEWIDTH, LeagueInvaders.FRAMEHEIGHT);
 		g.setFont(titleFont);
 		g.setColor(Color.YELLOW);
@@ -177,6 +178,9 @@ public class GamePanel extends JPanel implements ActionListener,KeyListener{
 	void drawGameState(Graphics g) {
 		g.drawImage(spaceImg, 0, 0, LeagueInvaders.FRAMEWIDTH, LeagueInvaders.FRAMEHEIGHT, null);
 		manager.draw(g);
+		g.setColor(Color.YELLOW);
+		g.setFont(gameOverSmall);
+		g.drawString("Score : " + manager.getScore() + "",50, 50);
 		
 		
 	}
@@ -188,7 +192,8 @@ public class GamePanel extends JPanel implements ActionListener,KeyListener{
 		g.setColor(Color.BLACK);
 		g.drawString("GAME OVER", 100, 200);
 		g.setFont(gameOverSmall);
-		g.drawString("You shot "  + "aliens!  Press ||ENTER|| to restart.", 20, 300);
+		g.drawString("Score : " + manager.getScore(),200, 300);
+		g.drawString("Press ENTER to restart.", 125, 375);		
 	}
 	
 	void drawInstructionState(Graphics g) {
