@@ -40,7 +40,7 @@ public class Level1ReviewCoding implements ActionListener{
 	public void createUI() {
 		frame = new JFrame();
 		panel = new JPanel();
-		b1 = new JButton("Hint");
+ 		b1 = new JButton("Hint");
 		b2 = new JButton("Submit");
 		label = new JLabel();
 		 text = new JTextField("Type an answer here");
